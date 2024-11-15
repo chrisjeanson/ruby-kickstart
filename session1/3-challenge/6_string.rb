@@ -6,5 +6,9 @@
 #
 
 def odds_and_evens(string, return_odds)
-
+  if return_odds == true
+    (1..string.length-1).step(2).map { |i| string[i] }.join
+  else
+    (0..string.length-1).step(2).map { |i| string[i] }.join
+  end
 end
