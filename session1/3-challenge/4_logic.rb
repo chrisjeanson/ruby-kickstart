@@ -13,6 +13,15 @@
 
 
 def grade(num_books, has_read_books)
+  base_grade = case num_books
+               when 0...10 then 'D'
+               when 10..20 then 'C'
+               else 'B'
+               end
+
+  grades = ['A', 'B', 'C', 'D']
+  grade_index = grades.index(base_grade)
+  has_read_books ? grades[grade_index - 1] : base_grade
 end
 
 
