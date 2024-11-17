@@ -5,5 +5,5 @@
 # pirates_say_arrrrrrrrr("Pirates say arrrrrrrrr")        # => "arrrrrrrr"
 
 def pirates_say_arrrrrrrrr(string)
-
+  string.each_char.each_cons(2).select { |a,b| a.downcase == 'r' }.map(&:last).join
 end
